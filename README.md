@@ -30,7 +30,8 @@
 
   /* Animated background gradient */
   .animated-background {
-    position: fixed; inset: 0;
+    position: fixed;
+    inset: 0;
     background: linear-gradient(270deg, #0d1117, #1f2c36, #0d1117);
     background-size: 600% 600%;
     animation: gradientShift 30s ease infinite;
@@ -108,11 +109,6 @@
     color: #fff;
     font-size: 1rem;
     box-shadow: 0 4px 12px rgba(78, 158, 172, 0.3);
-    animation: bounceBadge 2s infinite;
-  }
-  @keyframes bounceBadge {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-5px); }
   }
   /* Scroll indicator */
   .scroll-indicator {
@@ -187,7 +183,7 @@
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   }
 
-  /* boxes under campus hangout and events styling */
+  /* boxes styling */
   .place-card {
     background-color: #2c3e50;
     border-radius: 15px;
@@ -214,11 +210,10 @@
     color: #fff;
     position: relative;
   }
-  /*  background change */
+  /* hover background change */
   .place-image:hover {
     background: linear-gradient(135deg, #4ca1af, #2c3e50);
   }
- 
 
   .place-content {
     padding: 1rem;
@@ -241,7 +236,7 @@
     animation: pulse 2s infinite alternate;
   }
   @keyframes pulse {
-    0% { background-color: var(--highlight-color); }
+    0% { background-color: var(--highlight-color); color: #fff; }
     100% { background-color: #fff; color: #000; }
   }
 
@@ -337,6 +332,10 @@
     animation: moveBackground 25s linear infinite;
     z-index: -1;
   }
+  @keyframes moveBackground {
+    0% { transform: translate(0,0); }
+    100% { transform: translate(50px, -50px); }
+  }
   .footer-content {
     position: relative;
     z-index: 1;
@@ -421,7 +420,7 @@
 <!-- Hero Section -->
 <div class="hero" id="home">
   <h1> NSUT CAMPUS GUIDE </h1>
-  <p> Your complete guide to explore NSUT campus,hangout spots. Whether you are here for studies or fun with friends, this guide helps you navigate and enjoy every moment!!!</p>
+  <p> Your complete guide to explore NSUT campus, hangout spots. Whether you are here for studies or fun with friends, this guide helps you navigate and enjoy every moment!!!</p>
   <div class="hero-badge"><a href="https://maps.app.goo.gl/s27e3ukNzF3mfc1h7" style="text-decoration:none; color:white;"> DWARKA, SOUTH-WEST DELHI </a></div>
 </div>
 
@@ -459,7 +458,7 @@
         <p>Popular for expensive coffee, badiya watermelon ice tea, and instant maggie.</p>
       </div>
     </div>
-    <!-- box for nescii lawn -->
+    <!-- box for Nescii Lawn -->
     <div class="place-card" onclick="window.open('https://maps.app.goo.gl/SH9TCJZT4Hy1Zd3x7','_blank')">
       <div class="place-image">🌿</div>
       <div class="place-content">
@@ -467,8 +466,8 @@
         <h3>Nescii Lawn</h3>
         <p>Perfect for outdoor gatherings and relaxing near Admin block.</p>
       </div>
-    <!-- box for music room -->
     </div>
+    <!-- box for music room -->
     <div class="place-card" onclick="window.open('https://maps.app.goo.gl/i32AkhXq52sBFfFj9','_blank')">
       <div class="place-image">🎶</div>
       <div class="place-content">
@@ -492,16 +491,16 @@
       <div class="place-content">
         <div class="place-tag">Sports & Fitness</div>
         <h3>Sports Complex</h3>
-        <p>Cricket, vollyball, football ground and basketball area.Moreover a peaceful area to chill and relax.</p>
+        <p>Cricket, volleyball, football ground and basketball area. Moreover, a peaceful area to chill and relax.</p>
       </div>
     </div>
-    <!-- box for nsut lake -->
+    <!-- box for NSUT Lake -->
     <div class="place-card" onclick="window.open('https://maps.app.goo.gl/FQ3gwMw3Us69BJM89','_blank')">
       <div class="place-image">🏞️</div>
       <div class="place-content">
         <div class="place-tag">Nature & Peace</div>
         <h3>NSUT Lake</h3>
-        <p>Restrickted area but jugad krke ja sakte ho.</p>
+        <p>Restricted area but jugad krke ja sakte ho.</p>
       </div>
     </div>
   </div>
@@ -526,19 +525,17 @@
         <div class="place-tag">tech fest of NSUT</div>
         <h3>Innovision</h3>
         <p>Tech and innovation hackathon with industry experts.</p>
-         </div>
+      </div>
     </div>
-    
     <!-- Event: Moksha -->
     <div class="place-card" onclick="window.open('https://www.instagram.com/mokshansut?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==','_blank')">
-    <div class="place-image">🎶</div>
+      <div class="place-image">🎶</div>
       <div class="place-content">
         <div class="place-tag">Largest fest</div>
         <h3>Moksha</h3>
         <p>Music and arts festival showcasing student talent.</p>
       </div>
     </div>
-    <!-- More events -->
   </div>
 
   <!-- Campus Stats -->
@@ -567,7 +564,7 @@
 <!-- Contact -->
 <div id="contact" style="padding:4rem 2rem; background-color:#111; text-align:center;">
   <h2 style="color:#F4A261;">Contact Us</h2>
-  <p style="color:#ccc;">Email: info@nsut.ac.in | Phone: +91 01125000268 </p>
+  <p style="color:#ccc;">Email: info@nsut.ac.in | Phone: +91 01125000268</p>
 </div>
 
 <!-- Footer -->
@@ -579,9 +576,10 @@
     <p style="margin-top:1rem;">📧 info@nsut.ac.in | 📞 +91-11-25099022</p>
     <div class="social-links" style="margin-top:1.5rem;">
       <div class="social-icon" onclick="window.open('https://www.instagram.com/nsut.official?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==','_blank')">📱</div>
-      <div class="social-icon" onclick="window.open('https://nsut.ac.in/,_blank')">🌐</div>
-      <div class="social-icon" oneclick="window.open('https://nsut.ac.in/en/about-campus','_blank')">🏫	</div></div>
-    <p style="margin-top:2rem; opacity:0.7;">Lets go! NSUT campus guide. Keep Exploring! 🚀</p>
+      <div class="social-icon" onclick="window.open('https://nsut.ac.in/','_blank')">🌐</div>
+      <div class="social-icon" onclick="window.open('https://nsut.ac.in/en/about-campus','_blank')">🏫</div>
+    </div>
+    <p style="margin-top:2rem; opacity:0.7;">Let's go! NSUT campus guide. Keep Exploring! 🚀</p>
   </div>
 </footer>
 
